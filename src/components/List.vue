@@ -20,7 +20,7 @@
     <h2>{{name}}</h2>
 
     <div class="cards">
-      <Card v-for="card in cards" :name="card.name" />
+      <Card v-for="card in cards" :name="card.name" :votes="card.votes" />
     </div>
 
   </div>

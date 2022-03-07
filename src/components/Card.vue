@@ -1,7 +1,14 @@
 <script>
 
+	import Votes from './Votes.vue';
+
 	export default {
-		props: ['name']
+		components: { Votes },
+		props: ['name', 'votes'],
+		mounted() {
+			console.log('mounted');
+			console.log(this.votes);
+		}
 	}
 
 </script>
@@ -11,6 +18,8 @@
 	<div class="card">
 
 		<p>{{name}}</p>
+
+		<Votes :votes="votes" />
 
 	</div>
 

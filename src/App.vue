@@ -10,6 +10,10 @@ import Board from './components/Board.vue'
 
 <style lang="scss">
 
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     background: $colour-tertiary;
   }
@@ -18,7 +22,6 @@ import Board from './components/Board.vue'
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     padding: $gutter;
   }
 

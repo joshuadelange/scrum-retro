@@ -1,10 +1,14 @@
 import mock_data from '../../data/cards'
+import NextId from '../../classes/NextId'
 
 export default {
   state: () => ({
     all: mock_data.cards
   }),
   mutations: {
+    add (state, card) {
+      state.all.push(card);
+    },
     update(state, data) {
       const index = state.all.findIndex(card => card.id == data.id);
       state.all[index] = data;
@@ -22,6 +26,13 @@ export default {
     },
     delete_card({commit, state}, card_id) {
       commit('delete', card_id);
+    },
+    add_card({commit, state}, category_id) {
+      commit('add', {
+        id: new NextId(state.all).id,
+        category_id: category_id,
+        name: null
+      });
     }
   },
   getters: {

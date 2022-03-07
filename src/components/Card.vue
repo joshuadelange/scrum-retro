@@ -13,6 +13,11 @@
 				new_name: ''
 			}
 		},
+		mounted(){
+			if(this.card.name == null) {
+				this.editing = true
+			}
+		},
 		computed: {
 			card(){
 				return this.$store.getters.card_for_id(this.id);

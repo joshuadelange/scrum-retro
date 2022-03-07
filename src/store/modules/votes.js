@@ -16,10 +16,10 @@ export default {
     }
   },
   actions: {
-    remove({commit, state}, vote_id) {
+    remove_vote({commit, state}, vote_id) {
       commit('remove', vote_id);
     },
-    add({commit, state}, card_id) {
+    add_vote({commit, state}, card_id) {
       commit('add', {
         id: new NextId(state.all).id,
         card_id: card_id,

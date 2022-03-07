@@ -8,7 +8,7 @@
       'votes_for_card'
     ]),
     methods: mapActions([
-      'add', 'remove'
+      'add_vote', 'remove_vote'
     ])
   }
 
@@ -18,8 +18,8 @@
 
   <div class="votes">
 
-    <div v-for="vote in votes_for_card(card_id)" @click="remove(vote.id)" class="vote">&times;</div>
-    <div class="vote vote--add" @click="add(card_id)">+</div>
+    <div v-for="vote in votes_for_card(card_id)" @click="remove_vote(vote.id)" class="vote">&times;</div>
+    <div class="vote vote--add" @click="add_vote(card_id)">+</div>
 
   </div>
 

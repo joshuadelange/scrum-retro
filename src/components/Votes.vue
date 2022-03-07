@@ -1,6 +1,6 @@
 <script>
 
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
 
   export default {
     props: ['card_id', 'votes'],
@@ -8,12 +8,9 @@
       'votes_for_card'
     ]),
     methods: {
-      add_vote() {
-        this.votes.push({voter: 'guest'});
-      },
-      remove_vote(index) {
-        this.votes.slice(index, 1);
-      }
+      ...mapActions([
+        'add', 'remove'
+      ])
     }
   }
 
@@ -23,8 +20,8 @@
 
   <div class="votes">
 
-    <div v-for="vote in votes_for_card(card_id)" @click="remove_vote(index)" class="vote">&times;</div>
-    <div class="vote vote--add" @click="add_vote">+</div>
+    <div v-for="vote in votes_for_card(card_id)" @click="remove(vote.id)" class="vote">&times;</div>
+    <div class="vote vote--add" @click="add(card_id)">+</div>
 
   </div>
 

@@ -1,14 +1,15 @@
 <script>
 
+  import { mapGetters } from 'vuex';
+
   import Card from './Card.vue';
 
   export default {
-    props: ['name', 'cards'],
+    props: ['id', 'name'],
     components: { Card },
-    data() {
-      return {
-      }
-    }
+    computed: mapGetters([
+      'cards_for_category'   
+    ])
   }
 
 </script>
@@ -20,8 +21,10 @@
     <h2>{{name}}</h2>
 
     <div class="cards">
-      <Card v-for="card in cards" :name="card.name" :votes="card.votes" />
+      <Card v-for="card in cards_for_category(id)" :id="card.id" :name="card.name" />
     </div>
+
+    <button>Add card</button>
 
   </div>
 

@@ -4,11 +4,7 @@
 
 	export default {
 		components: { Votes },
-		props: ['name', 'votes'],
-		mounted() {
-			console.log('mounted');
-			console.log(this.votes);
-		}
+		props: ['id', 'name']
 	}
 
 </script>
@@ -19,7 +15,7 @@
 
 		<p>{{name}}</p>
 
-		<Votes :votes="votes" />
+		<Votes :card_id="id" />
 
 	</div>
 

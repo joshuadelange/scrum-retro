@@ -21,7 +21,7 @@
     <h2>{{name}}</h2>
 
     <div class="cards">
-      <Card v-for="card in cards_for_category(id)" :id="card.id" :name="card.name" />
+      <Card v-for="card in cards_for_category(id)" :id="card.id" />
     </div>
 
     <button>Add card</button>

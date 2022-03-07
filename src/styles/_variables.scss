@@ -4,13 +4,16 @@ $gutter-half: calc($gutter / 2);
 $gutter-quarter: calc($gutter / 4);
 
 // colours
-$colour-primary: #fcd45d;
-$colour-secondary: white;
-$colour-tertiary: #F7F7F7;
+$colour-primary: #fcd45d; // yellow
+$colour-secondary: white; // white
+$colour-tertiary: #F7F7F7; // light grey
 
 $colour-primary-dark: darken($colour-primary, 40%);
 $colour-secondary-dark: darken($colour-secondary, 10%);
 $colour-tertiary-dark: darken($colour-tertiary, 15%);
+
+$colour-text: #323232;
+$colour-text-light: lighten(#323232, 50%);
 
 // font weights
 $font-weight-light: 200;

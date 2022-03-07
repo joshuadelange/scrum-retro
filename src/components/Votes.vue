@@ -7,11 +7,9 @@
     computed: mapGetters([
       'votes_for_card'
     ]),
-    methods: {
-      ...mapActions([
-        'add', 'remove'
-      ])
-    }
+    methods: mapActions([
+      'add', 'remove'
+    ])
   }
 
 </script>

@@ -1,0 +1,8 @@
+@mixin border-soft($size: 5px) {
+	border: 1px solid $colour-tertiary-dark;
+	box-shadow: 0 0 $size $colour-tertiary-dark;
+}
+
+@mixin border-sharp {
+	border: 1px solid $colour-tertiary-dark;
+}

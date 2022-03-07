@@ -1,0 +1,17 @@
+// gutters
+$gutter: 25px;
+$gutter-half: calc($gutter / 2);
+
+// colours
+$colour-primary: #fcd45d;
+$colour-secondary: white;
+$colour-tertiary: #F7F7F7;
+
+$colour-primary-dark: darken($colour-primary, 40%);
+$colour-secondary-dark: darken($colour-secondary, 10%);
+$colour-tertiary-dark: darken($colour-tertiary, 15%);
+
+// font weights
+$font-weight-light: 200;
+$font-weight-medium: 500;
+$font-weight-heavy: 700;

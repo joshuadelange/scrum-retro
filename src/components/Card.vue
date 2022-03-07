@@ -22,5 +22,9 @@
 		@include border-sharp;
 		margin: -1px;
 		background-color: $colour_secondary;
+
+		p {
+			font-size: 1.25rem;
+		}
 	}
 </style>

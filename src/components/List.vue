@@ -3,15 +3,10 @@
   import Card from './Card.vue';
 
   export default {
-    props: ['name'],
+    props: ['name', 'cards'],
     components: { Card },
     data() {
       return {
-        cards: [
-          {'name': 'bla 1'},
-          {'name': 'bla 2'},
-          {'name': 'bla 3'}
-        ]
       }
     }
   }
@@ -37,11 +32,11 @@
   .list {
 
     flex: 1;
+    align-self: flex-start;
 
     margin: $gutter;
 
     background-color: $colour-primary;
-
     @include border-soft;
 
     h2 {
@@ -49,6 +44,7 @@
       margin: $gutter;
       color: $colour-primary-dark;
       font-weight: $font-weight-medium;
+      font-size: 1rem;
     }
   }
 </style>

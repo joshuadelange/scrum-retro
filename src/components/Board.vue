@@ -7,10 +7,33 @@
       return {
         message: 'test',
         lists: [
-          { name: 'Good' },
-          { name: 'Bad' },
-          { name: 'Actions' },
-          { name: 'Ideas' }
+          {
+            name: 'Good',
+            cards: [
+              { name: 'API finally pushed to prod' },
+              { name: 'Designer on board' }
+            ]
+          },
+          {
+            name: 'Bad',
+            cards: [
+              { name: 'Wait too long for team to respond to Slack' },
+              { name: 'Sprint goal unclear' },
+              { name: 'Too many tickets waiting for PO review' }
+            ]
+          },
+          {
+            name: 'Actions',
+            cards: [
+              { name: 'Plan daily huddle at 11:00' }
+            ]
+          },
+          {
+            name: 'Ideas',
+            cards: [
+              { name: 'Invite stakeholders to demos more often?' }
+            ]
+          }
         ]
       }
     }
@@ -21,7 +44,7 @@
 <template>
 
   <div class="lists">
-    <List v-for="list in lists" :name="list.name" />
+    <List v-for="list in lists" :name="list.name" :cards="list.cards" />
   </div>
 
 </template>

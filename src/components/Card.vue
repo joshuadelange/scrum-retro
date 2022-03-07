@@ -26,6 +26,11 @@
 			edit_card(){
 				this.editing = true;
 				this.new_name = this.card.name;
+			},
+			delete_card(){
+				if(confirm('Are you sure you want to delete this card?')) {
+					this.$store.dispatch('delete_card', this.card.id);
+				}
 			}
 		}
 	}
@@ -39,7 +44,7 @@
 		<p v-if="!editing">
 			{{card.name}}
 			<font-awesome-icon @click="edit_card" icon="pencil" />
-			<font-awesome-icon icon="trash" />
+			<font-awesome-icon @click="delete_card" icon="trash" />
 		</p>
 
 		<div v-if="editing" class="form">

@@ -8,6 +8,10 @@ export default {
     update(state, data) {
       const index = state.all.findIndex(card => card.id == data.id);
       state.all[index] = data;
+    },
+    delete(state, card_id) {
+      const index = state.all.findIndex(card => card.id == card_id);
+      state.all.splice(index, 1);
     }
   },
   actions: {
@@ -15,6 +19,9 @@ export default {
       let card = Object.assign({}, state.all.find(card => card.id == data.id));
       card.name = data.name;
       commit('update', card);
+    },
+    delete_card({commit, state}, card_id) {
+      commit('delete', card_id);
     }
   },
   getters: {

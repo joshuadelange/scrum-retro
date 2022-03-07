@@ -23,13 +23,16 @@ export default {
       commit('add', {
         id: new NextId(state.all).id,
         card_id: card_id,
-        voter: 'guest'
+        voter: 'current_user'
       });
     }
   },
   getters: {
     votes_for_card: (state) => (id) => {
       return state.all.filter(vote => vote.card_id == id);
+    },
+    number_of_current_user_votes_for_card: (state) => (id) => {
+      return state.all.filter(vote => vote.card_id == id && vote.voter == 'current_user').length;
     }
   }
 }

@@ -13,7 +13,6 @@
     methods: mapActions([
       'add_card'
     ])
-
   }
 
 </script>

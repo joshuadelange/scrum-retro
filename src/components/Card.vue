@@ -57,7 +57,7 @@
 			<button @click="save_card"><font-awesome-icon icon="check" /></button>
 		</div>
 
-		<Votes :card_id="card_id" />
+		<Votes v-if="!editing" :card_id="card_id" />
 
 	</div>
 

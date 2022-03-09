@@ -12,7 +12,7 @@ describe('List', () => {
 
     // set up the first category as a list
     const wrapper = mount(List, {
-      props: { id: 1 },
+      props: { category_id: 1 },
       global: test_globals
     })
 
@@ -25,7 +25,7 @@ describe('List', () => {
 
     // set up a category as list
     const wrapper = mount(List, {
-      props: { id: 1 },
+      props: { category_id: 1 },
       global: test_globals
     })
 

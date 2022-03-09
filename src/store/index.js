@@ -4,7 +4,7 @@ import categories from './modules/categories'
 import cards from './modules/cards'
 import votes from './modules/votes'
 
-const debug = process.env.NODE_ENV !== 'production'
+const debug = process.env.NODE_ENV == 'development'
 
 export default createStore({
   modules: {

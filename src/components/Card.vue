@@ -103,5 +103,9 @@
 				display: inline;
 			}
 		}
+
+		button {
+			@include button;
+		}
 	}
 </style>

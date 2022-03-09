@@ -1,3 +1,6 @@
+/*
+	borders
+*/
 @mixin border-soft($size: 5px) {
 	border: 1px solid $colour-tertiary-dark;
 	box-shadow: 0 0 $size $colour-tertiary-dark;
@@ -7,6 +10,9 @@
 	border: 1px solid $colour-tertiary-dark;
 }
 
+/*
+	dots
+*/
 @mixin dot-filled {
 	background-color: $colour-primary;
 	color: $colour-primary;
@@ -16,4 +22,29 @@
 	border: 2px solid $colour-primary;
 	background-color: transparent;
 	color: $colour-primary-dark;
+}
+
+/*
+	button
+*/
+@mixin button {
+
+	appearance: none;
+	-webkit-appearance: none;
+	border: none;
+
+	padding: $gutter-quarter $gutter-half;
+
+	background-color: transparent;
+	color: $colour-primary-dark;
+	border: 1px solid $colour-primary-dark;
+
+	font-weight: $font-weight-medium;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $colour-primary-dark;
+		color: $colour-primary;
+	}
+
 }

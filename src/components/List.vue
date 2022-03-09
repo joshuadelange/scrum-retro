@@ -60,6 +60,7 @@
 
     button {
       margin: $gutter_half;
+      @include button;
     }
   }
 </style>

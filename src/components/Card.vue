@@ -25,6 +25,7 @@
 		},
 		methods: {
 			save_card(){
+				if(this.new_name == '') return
 				this.editing = false;
 				this.$store.dispatch('update_card_name', {id: this.card_id, name: this.new_name });
 			},

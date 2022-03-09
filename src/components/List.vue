@@ -50,6 +50,10 @@
     background-color: $colour-primary;
     @include border-soft;
 
+    @media(max-width: 865px) {
+      min-width: 230px;
+    }
+
     h2 {
       display: block;
       margin: $gutter;

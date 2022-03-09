@@ -75,6 +75,7 @@
 			padding-bottom: $gutter;
 
 			input {
+				width: 100%;
 				flex-grow: 1;
 				font-size: 1.25rem;
 				@include border-sharp;

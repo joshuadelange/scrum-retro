@@ -20,10 +20,11 @@
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
   .lists {
     display: flex;
+    flex-wrap: wrap;
   }
 
 </style>

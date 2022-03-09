@@ -48,8 +48,6 @@
 
 		<p class="name" v-if="!editing">
 			{{card.name}}
-			<font-awesome-icon class="edit" @click="edit_card" icon="pencil" />
-			<font-awesome-icon class="delete" @click="delete_card" icon="trash" />
 		</p>
 
 		<div v-if="editing" class="form">
@@ -57,7 +55,14 @@
 			<button @click="save_card"><font-awesome-icon icon="check" /></button>
 		</div>
 
-		<Votes v-if="!editing" :card_id="card_id" />
+		<div v-if="!editing" class="bottom-row">
+			<Votes :card_id="card_id" />
+
+			<div class="card-buttons">
+				<font-awesome-icon class="edit" @click="edit_card" icon="pencil" />
+				<font-awesome-icon class="delete" @click="delete_card" icon="trash" />
+			</div>
+		</div>
 
 	</div>
 
@@ -86,6 +91,11 @@
 		p {
 			font-size: 1.25rem;
 
+		}
+
+		.bottom-row {
+			display: flex;
+			justify-content: space-between;
 			svg {
 				display: none;
 				font-size: 1rem;
@@ -100,7 +110,7 @@
 		}
 
 		&:hover {
-			p svg {
+			.bottom-row svg {
 				display: inline;
 			}
 		}

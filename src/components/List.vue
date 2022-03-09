@@ -5,11 +5,16 @@
   import Card from './Card.vue';
 
   export default {
-    props: ['id', 'name'],
+    props: ['id'],
     components: { Card },
-    computed: mapGetters([
-      'cards_for_category'   
-    ]),
+    computed: {
+      category(){
+        return this.$store.getters.category_for_id(this.id);
+      },
+      ...mapGetters([
+        'cards_for_category', 'category_for_id'   
+      ])
+    },
     methods: mapActions([
       'add_card'
     ])
@@ -21,7 +26,7 @@
 
   <div class="list">
 
-    <h2>{{name}}</h2>
+    <h2>{{category.name}}</h2>
 
     <div class="cards">
       <Card v-for="card in cards_for_category(id)" :id="card.id" />

@@ -15,7 +15,7 @@
 <template>
 
   <div class="lists">
-    <List v-for="category in categories" :id="category.id" :name="category.name" />
+    <List v-for="category in categories" :id="category.id" />
   </div>
 
 </template>

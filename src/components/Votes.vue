@@ -3,7 +3,7 @@
   import { mapGetters, mapActions } from 'vuex'
 
   export default {
-    props: ['card_id', 'votes'],
+    props: ['card_id'],
     computed: mapGetters([
       'votes_for_card'
     ]),

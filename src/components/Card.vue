@@ -20,7 +20,7 @@
 		},
 		computed: {
 			card(){
-				return this.$store.getters.card_for_id(this.id);
+				return this.$store.getters.card_for_id(this.id) || {};
 			}
 		},
 		methods: {
@@ -46,10 +46,10 @@
 
 	<div class="card">
 
-		<p v-if="!editing">
+		<p class="name" v-if="!editing">
 			{{card.name}}
-			<font-awesome-icon @click="edit_card" icon="pencil" />
-			<font-awesome-icon @click="delete_card" icon="trash" />
+			<font-awesome-icon class="edit" @click="edit_card" icon="pencil" />
+			<font-awesome-icon class="delete" @click="delete_card" icon="trash" />
 		</p>
 
 		<div v-if="editing" class="form">

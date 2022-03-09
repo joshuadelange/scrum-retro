@@ -51,7 +51,7 @@
 		</p>
 
 		<div v-if="editing" class="form">
-			<input type="text" v-model="new_name" />
+			<input type="text" v-model="new_name" @keyup.enter="save_card" />
 			<button @click="save_card"><font-awesome-icon icon="check" /></button>
 		</div>
 

@@ -53,7 +53,7 @@
     h2 {
       display: block;
       margin: $gutter;
-      color: $colour-primary-dark;
+      color: $colour-text;
       font-weight: $font-weight-medium;
       font-size: 1rem;
     }

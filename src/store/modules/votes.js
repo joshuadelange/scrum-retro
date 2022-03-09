@@ -30,9 +30,6 @@ export default {
   getters: {
     votes_for_card: (state) => (id) => {
       return state.all.filter(vote => vote.card_id == id);
-    },
-    number_of_current_user_votes_for_card: (state) => (id) => {
-      return state.all.filter(vote => vote.card_id == id && vote.voter == 'current_user').length;
     }
   }
 }

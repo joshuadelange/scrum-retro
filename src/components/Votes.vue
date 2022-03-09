@@ -5,7 +5,7 @@
   export default {
     props: ['card_id', 'votes'],
     computed: mapGetters([
-      'votes_for_card', 'number_of_current_user_votes_for_card'
+      'votes_for_card'
     ]),
     methods: mapActions([
       'add_vote', 'remove_vote'
@@ -19,7 +19,7 @@
   <div class="votes">
 
     <div v-for="vote in votes_for_card(card_id)" @click="remove_vote(vote.id)" class="vote">&times;</div>
-    <div v-if="number_of_current_user_votes_for_card(card_id) == 0" class="vote vote--add" @click="add_vote(card_id)">+</div>
+    <div class="vote vote--add" @click="add_vote(card_id)">+</div>
 
   </div>
 

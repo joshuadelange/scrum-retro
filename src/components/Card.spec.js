@@ -15,7 +15,7 @@ describe('Card', () => {
 
     // set up a card
     const wrapper = mount(Card, {
-      props: { id: 1 },
+      props: { card_id: 1 },
       global: test_globals
     })
 
@@ -45,7 +45,7 @@ describe('Card', () => {
 
     // set up the first category as a Card
     const wrapper = mount(Card, {
-      props: { id: 1 },
+      props: { card_id: 1 },
       global: test_globals
     })
 

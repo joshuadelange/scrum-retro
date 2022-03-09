@@ -6,7 +6,7 @@
 
 	export default {
 		components: { Votes, FontAwesomeIcon },
-		props: ['id'],
+		props: ['card_id'],
 		data (){
 			return {
 				editing: false,
@@ -20,13 +20,13 @@
 		},
 		computed: {
 			card(){
-				return this.$store.getters.card_for_id(this.id) || {};
+				return this.$store.getters.card_for_id(this.card_id) || {};
 			}
 		},
 		methods: {
 			save_card(){
 				this.editing = false;
-				this.$store.dispatch('update_card_name', {id: this.card.id, name: this.new_name });
+				this.$store.dispatch('update_card_name', {id: this.card_id, name: this.new_name });
 			},
 			edit_card(){
 				this.editing = true;
@@ -34,7 +34,7 @@
 			},
 			delete_card(){
 				if(confirm('Are you sure you want to delete this card?')) {
-					this.$store.dispatch('delete_card', this.card.id);
+					this.$store.dispatch('delete_card', this.card_id);
 				}
 			}
 		}
@@ -57,7 +57,7 @@
 			<button @click="save_card"><font-awesome-icon icon="check" /></button>
 		</div>
 
-		<Votes :card_id="id" />
+		<Votes :card_id="card_id" />
 
 	</div>
 

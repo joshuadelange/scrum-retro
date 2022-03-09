@@ -29,7 +29,7 @@
     <h2>{{category.name}}</h2>
 
     <div class="cards">
-      <Card v-for="card in cards_for_category(category_id)" :id="card.id" />
+      <Card v-for="card in cards_for_category(category_id)" :card_id="card.id" />
     </div>
 
     <button @click="add_card(category_id)">Add card</button>

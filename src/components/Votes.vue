@@ -31,14 +31,14 @@
 
     .vote {
 
-      width: 20px;
-      height: 20px;
-      border-radius: 10px;
+      width: 22px;
+      height: 22px;
+      border-radius: 11px;
 
       margin-right: $gutter-quarter;
 
       text-align: center;
-      line-height: 1rem;
+      line-height: 1.2rem;
 
       cursor: pointer;
 
